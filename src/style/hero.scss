@@ -1,0 +1,108 @@
+.images_container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template:
+    50px repeat(6, 100px) 50px / 50px repeat(auto-fit, minmax(200px, 1fr))
+    50px;
+}
+
+img {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+//placing the grid items inside the grid container
+img[alt='child'] {
+  grid-area: 2/2/4/3;
+}
+img[alt='student'] {
+  object-fit: scale-down;
+  grid-area: 6/4/9/5;
+}
+img[alt='ambasador'] {
+  grid-area: 3/4/6/5;
+}
+img[alt='man'] {
+  grid-area: 3/6/6/7;
+}
+img[alt='portrait'] {
+  grid-area: 5/3/7/4;
+}
+img[alt='suitcase'] {
+  grid-area: 2/5/4/6;
+}
+img[alt='woman'] {
+  grid-area: 4/5/7/6;
+}
+img[alt='person_640'] {
+  grid-area: 2/3/5/4;
+}
+img[alt='fashion'] {
+  grid-area: 4/2/8/3;
+}
+//end of grid items
+.hero_header {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  padding-left: 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+p.hero_paragraph {
+  display: block;
+  padding-left: 2.2rem;
+  padding-block: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media (max-width: 1250px) {
+  .images_container {
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    img[alt='man'] {
+      grid-area: 2/2/4/3;
+      display: none;
+    }
+    img[alt='person_640'] {
+      grid-area: 3/3/5/4;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .images_container {
+    grid-template: 20px 100px 170px 100px 170px 20px / 10px 1fr 1fr 10px;
+    img[alt='person_640'] {
+      grid-area: 3/2/5/3;
+      object-fit: cover;
+    }
+    img[alt='ambasador'] {
+      grid-area: 2/3/4/4;
+    }
+    img[alt='portrait'] {
+      grid-area: 4/3/6/4;
+    }
+    img[alt='fashion'] {
+      display: none;
+    }
+    img[alt='suitcase'] {
+      display: none;
+    }
+    img[alt='student'] {
+      display: none;
+    }
+    img[alt='woman'] {
+      display: none;
+    }
+    img[alt='child'] {
+      display: none;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .images_container {
+    display: none;
+  }
+}

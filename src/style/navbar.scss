@@ -1,0 +1,32 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav_container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+  padding-inline-start: 5rem;
+  gap: 3rem;
+  box-shadow: -1px 2px 10px rgb(224, 217, 217);
+}
+.logo_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30rem;
+
+  img {
+    width: 60px;
+    height: 60px;
+    margin-right: 0.3rem;
+  }
+  h3 {
+    color: #ff7977;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+  }
+}
