@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Cards from './components/Cards';
+import Container from './components/Container';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
     <Hero />
-    <Cards />
+    <Container />
   </React.StrictMode>
 );
