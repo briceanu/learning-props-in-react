@@ -15,18 +15,21 @@ function Container() {
         description='Riding tough'
         price='From $58 / night'
         stock='SOLD OUT'
+        country='Peru'
       />
       <Cards
         image={swimmer}
         description='Swim in the ice'
         price='From $125 / person'
         stock='ONLINE'
+        country='Norway'
       />
       <Cards
         image={bride}
         description='Wedding photography'
         price='From $200 / person'
         stock='IN SHOP'
+        country='USA'
       />
     </div>
   );
